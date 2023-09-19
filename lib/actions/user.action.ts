@@ -67,7 +67,11 @@ export async function fetchUserThreads(userId: string) {
       populate: {
         path: "children",
         model: Thread,
-        populate: { path: "author", model: User, select: "name image id" },
+        populate: {
+          path: "author",
+          model: User,
+          select: "firstName lastName image id",
+        },
       },
     });
 

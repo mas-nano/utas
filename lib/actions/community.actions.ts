@@ -58,7 +58,7 @@ export async function fetchCommunityDetails(id: string) {
       {
         path: "members",
         model: User,
-        select: "name username image _id id",
+        select: "firstName lastName username image _id id",
       },
     ]);
 
